@@ -7,10 +7,11 @@ import blue from "./blue.png";
 import purp from "./purp.png";
 import black from "./black.png";
 import green from "./green.png";
+import Modal from './Modal';
 
 function App() {
   const [value, setValue] = useState(0);
-  const [isToggle, setToggle] = useState(1);
+  const [isToggle, setToggle] = useState(false);
 
   console.log(isToggle);
 
@@ -44,6 +45,12 @@ function App() {
           value={value}
           onChange={e => setValue(e.target.value)}
         />
+        <Modal isToggle={isToggle} setToggle={setToggle}>
+          <Card style={{ background: "var(--purp)" }}>
+            <h3>Some card</h3>
+            <img src={purp} />
+          </Card>
+        </Modal>
         <CardGrid>
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
