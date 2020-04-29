@@ -8,6 +8,7 @@ import purp from "./purp.png";
 import black from "./black.png";
 import green from "./green.png";
 import Modal from './Modal';
+import Accordion from './Accordion';
 
 function App() {
   const [value, setValue] = useState(0);
@@ -26,6 +27,7 @@ function App() {
         <h1>Header</h1>
       </Header>
       <Container>
+        <Accordion />
         <AnimatePresence>
           {isToggle && (
             <motion.h2
